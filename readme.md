@@ -19,4 +19,4 @@ type `$ sudo visudo` and paste this line on bottom of file:
 %sudo ALL=(ALL) NOPASSWD: /usr/bin/nsenter -t [0-9]* -a su - [a-zA-Z0-9]*
 ```
 
-after this, systemd runs on wsl2.
+now restart wsl2 and after this, systemd runs on wsl2.
