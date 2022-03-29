@@ -1,5 +1,6 @@
-create a file in: `/etc/profile.d/00-wsl2-systemd.sh`
-paste this lines:
+first of all type these command for install packages: `sudo apt-get update && sudo apt-get install -yqq daemonize dbus-user-session fontconfig`
+
+after that with `nano` or `vi` or any editor create a file on this path: `/etc/profile.d/00-wsl2-systemd.sh` and paste this lines:
 ```
 SYSTEMD_PID=$(ps -ef | grep '/lib/systemd/systemd --system-unit=basic.target$' | grep -v unshare | awk '{print $2}')
 
